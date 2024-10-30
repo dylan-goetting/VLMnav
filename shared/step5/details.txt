@@ -1,0 +1,14 @@
+ACTION_NUMBER
+1
+
+PROMPT
+TASK: NAVIGATE TO THE NEAREST TOILET, and get as close to it as possible. Use your prior knowledge about where items are typically located within a home. There are 3 red arrows superimposed onto your observation, which represent potential actions. These are labeled with a number in a white circle, which represent the location you would move to if you took that action. NOTE: choose action 0 if you want to TURN AROUND or DONT SEE ANY GOOD ACTIONS. First, tell me what you see in your sensor observation, and if you have any leads on finding the TOILET. Second, tell me which general direction you should go in. Lastly, explain which action acheives that best, and return it as {'action': <action_key>}. Note you CANNOT GO THROUGH CLOSED DOORS, and you DO NOT NEED TO GO UP OR DOWN STAIRS
+
+RESPONSE
+I see a hallway with a door on the right and an open doorway on the left. There is a washing machine and dryer visible in the doorway on the left. I think the toilet is most likely to be in the room to the left.  I should go left. Action 1 will take me in that direction. 
+{'action': 1}
+
+STOPPING RESPONSE
+The image shows a hallway with a door on the right. The door is closed. The hallway is tiled and there is a doorway to the left. The doorway is open and you can see a washing machine and dryer. There is no toilet.  
+{'done': 0}
+

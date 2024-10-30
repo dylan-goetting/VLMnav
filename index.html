@@ -161,7 +161,7 @@
       <img id="teaser" src="./shared/pivot.gif" alt="teaser" height="100%">
 
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">
+        <span class="dnerf" > 
       </h2>
     </div>
   </div>
@@ -242,23 +242,22 @@
       </div>
     </div>
     <div class="container">
-      
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <img id="steve" src="./static/images/image.png" alt="teaser" height="100%">
-          <p class="subtitle has-text-centered">I see a TV and a TV stand to my left, a window to my right, and a chair in front of me. It looks like I am in a living room.  I should go in the direction of the chair. Action 2 will move me closer to the chair. {'action': 2}  </p>
+          <p class="subtitle is-size-7 has-text-centered">I see a TV and a TV stand to my left, a window to my right, and a chair in front of me. It looks like I am in a living room. I should go in the direction of the chair. Action 2 will move me closer to the chair. {'action': 2}</p>
         </div>
         <div class="item item-chair-tp">
           <img id="chair-tp" src="./static/images/image.png" alt="teaser" height="100%">
-          <p class="subtitle has-text-centered">I see a TV and a TV stand to my left, a window to my right, and a chair in front of me. It looks like I am in a living room.  I should go in the direction of the chair. Action 2 will move me closer to the chair. {'action': 2}  </p>
+          <p class="subtitle is-size-7 has-text-centered">I see a TV and a TV stand to my left, a window to my right, and a chair in front of me. It looks like I am in a living room. I should go in the direction of the chair. Action 2 will move me closer to the chair. {'action': 2}</p>
         </div>
         <div class="item item-coffee">
           <img id="coffee" src="./static/images/image.png" alt="teaser" height="100%">
-          <p class="subtitle has-text-centered">I see a TV and a TV stand to my left, a window to my right, and a chair in front of me. It looks like I am in a living room.  I should go in the direction of the chair. Action 2 will move me closer to the chair. {'action': 2}  </p>
+          <p class="subtitle is-size-7 has-text-centered">I see a TV and a TV stand to my left, a window to my right, and a chair in front of me. It looks like I am in a living room. I should go in the direction of the chair. Action 2 will move me closer to the chair. {'action': 2}</p>
         </div>
         <div class="item item-toby">
           <img id="toby" src="./static/images/image.png" alt="teaser" height="100%">
-          <p class="subtitle has-text-centered">I see a TV and a TV stand to my left, a window to my right, and a chair in front of me. It looks like I am in a living room.  I should go in the direction of the chair. Action 2 will move me closer to the chair. {'action': 2}  </p>
+          <p class="subtitle is-size-7 has-text-centered">I see a TV and a TV stand to my left, a window to my right, and a chair in front of me. It looks like I am in a living room. I should go in the direction of the chair. Action 2 will move me closer to the chair. {'action': 2}</p>
         </div>
       </div>
     </div>
@@ -277,11 +276,17 @@
       <div class="column">
         <div class="content">
           <h2 class="title is-3">Baseline: PIVOT</h2>
-          <p>
-            PIVOT (google 2024), is a similar visual-prompting method that uses the VLM's feedback to iteratively fit an action gaussian at each timestep
-          </p>
-          <img id="pivot" src="./shared/pivot.gif" alt="teaser" height="100%">
-
+          <div class="columns is-centered">
+            <div class="column content">
+              <p>
+                PIVOT (google 2024), is a similar visual-prompting method that uses the VLM's feedback to iteratively fit an action gaussian at each timestep. In this example, the agent's goal is to reach a bed, which it does successfully after a lot of time spent slowly turning around
+              </p>
+              <img id="pivot" src="./shared/pivot_bed_success.gif" alt="teaser" height="100%">
+              <p>
+                In this example, the agent's goal is to reach the toilet, but PIVOT struggles with multi-modality and avoiding obstacles.
+              </p>
+              <img id="pivot" src="./shared/PIVOT_toilet_fail.gif" alt="teaser" height="100%">
+            </div>
         </div>
       </div>
       <!--/ Visual Effects. -->
@@ -292,12 +297,17 @@
         <div class="columns is-centered">
           <div class="column content">
             <p>
-              To evaluate the direct impact of our prompting method, we run a baseline without the navigability and action_proposer modules.
+              To evaluate the direct impact of our prompting method, we run a baseline without the navigability and action_proposer modules. In this example, the agent's goal is to reach a bed, but it gets stuck behind obstacles
             </p>
-            <img id="pivot" src="./shared/pivot.gif" alt="teaser" height="100%">
+            <img id="pivot" src="./shared/base_bed_fail.gif" alt="teaser" height="100%">
 
           </div>
-
+          <div class="column content">
+            <p>
+              In this example, the agent's goal is to reach the toilet, which it completes successfully but after wasting a lot of time in the corner.
+            </p>
+            <img id="pivot" src="./shared/base_success_toilet.gif" alt="teaser" height="100%">
+          </div>
         </div>
       </div>
     </div>
