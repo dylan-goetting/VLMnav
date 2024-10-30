@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <!-- <link rel="stylesheet" href="./static/css/bulma-slider.min.css"> -->
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
@@ -233,7 +233,6 @@
     </div>
 </section>
 
-
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="columns is-centered has-text-centered">
@@ -243,170 +242,163 @@
     </div>
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <img id="steve" src="./static/images/image.png" alt="teaser" height="100%">
-          <p class="subtitle is-size-7 has-text-centered">I see a TV and a TV stand to my left, a window to my right, and a chair in front of me. It looks like I am in a living room. I should go in the direction of the chair. Action 2 will move me closer to the chair. {'action': 2}</p>
+        <div class="item" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <p class="caption is-size-6 has-text-centered">
+            STEP 0
+          </p>
+          <img id="step0" src="./shared/step0/color_sensor_chosen.png" alt="none" style="height: auto; max-height: 380px; width: auto; max-width: 100%;">
+          <blockquote class="caption is-size-7 has-text-justified" style="min-height: 200px; padding-bottom: 10px; font-style: italic; padding-left: 5pt; padding-right: 5pt;">
+            I see a bedroom with a bed on the right, a chair on the left, and a closed door in the background. Toilets are typically located in bathrooms, and there is a door in the background, so I should head towards that door. The best action to take would be to move to the right, towards the door.
+            <br>
+            <code>{'action': 1}</code>
+          </blockquote>
         </div>
-        <div class="item item-chair-tp">
-          <img id="chair-tp" src="./static/images/image.png" alt="teaser" height="100%">
-          <p class="subtitle is-size-7 has-text-centered">I see a TV and a TV stand to my left, a window to my right, and a chair in front of me. It looks like I am in a living room. I should go in the direction of the chair. Action 2 will move me closer to the chair. {'action': 2}</p>
+        <div class="item" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <p class="caption is-size-6 has-text-centered">
+            STEP 1
+          </p>
+          <img id="step1" src="./shared/step1/color_sensor_chosen.png" alt="none" style="height: auto; max-height: 400px; width: auto; max-width: 100%;">
+          <blockquote class="caption is-size-7 has-text-justified" style="min-height: 200px; padding-bottom: 10px; font-style: italic; padding-left: 5pt; padding-right: 5pt;">
+            I see a closed door to my right, and a bed in front of me. I also see a mirror on the wall, which is likely in a bathroom. I can see a reflection of a person standing in front of the mirror. I believe the bathroom is in the direction of the mirror. I should go in the direction of the mirror. I will take action 4, which will move me closer to the mirror.
+            <br>
+            <code>{'action': 4}</code>
+          </blockquote>
         </div>
-        <div class="item item-coffee">
-          <img id="coffee" src="./static/images/image.png" alt="teaser" height="100%">
-          <p class="subtitle is-size-7 has-text-centered">I see a TV and a TV stand to my left, a window to my right, and a chair in front of me. It looks like I am in a living room. I should go in the direction of the chair. Action 2 will move me closer to the chair. {'action': 2}</p>
+        <div class="item" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <p class="caption is-size-6 has-text-centered">
+            STEP 2
+          </p>
+          <img id="step2" src="./shared/step2/color_sensor_chosen.png" alt="none" style="height: auto; max-height: 400px; width: auto; max-width: 100%;">
+          <blockquote class="caption is-size-7 has-text-justified" style="min-height: 200px; padding-bottom: 10px; font-style: italic; padding-left: 5pt; padding-right: 5pt;">
+            I see a hallway with a closed door on the left, a mirror on the right, and a large wooden object against the wall to the right. I don't see any toilets. I should go forward and to the right, towards the mirror. I believe the toilet is probably in the bathroom on the other side of the mirror. Action 2 should take me in that direction.
+            <br>
+            <code>{'action': 2}</code>
+          </blockquote>
         </div>
-        <div class="item item-toby">
-          <img id="toby" src="./static/images/image.png" alt="teaser" height="100%">
-          <p class="subtitle is-size-7 has-text-centered">I see a TV and a TV stand to my left, a window to my right, and a chair in front of me. It looks like I am in a living room. I should go in the direction of the chair. Action 2 will move me closer to the chair. {'action': 2}</p>
+        <div class="item" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <p class="caption is-size-6 has-text-centered">
+            STEP 3
+          </p>
+          <img id="step3" src="./shared/step3/color_sensor_chosen.png" alt="none" style="height: auto; max-height: 400px; width: auto; max-width: 100%;">
+          <blockquote class="caption is-size-7 has-text-justified" style="min-height: 200px; padding-bottom: 10px; font-style: italic; padding-left: 5pt; padding-right: 5pt;">
+            I see a hallway with a door to my left and a large mirror to my right. There's another door further down the hallway. It looks like the toilet is probably behind the door to my left. I should go left. Action 1 will move me in that direction.
+            <br>
+
+            <code>{'action': 1}</code>
+          </blockquote>
+        </div>
+        <div class="item" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <p class="caption is-size-6 has-text-centered">
+            STEP 4
+          </p>
+          <img id="step4" src="./shared/step4/color_sensor_chosen.png" alt="none" style="height: auto; max-height: 400px; width: auto; max-width: 100%;">
+          <blockquote class="caption is-size-7 has-text-justified" style="min-height: 200px; padding-bottom: 10px; font-style: italic; padding-left: 5pt; padding-right: 5pt;">
+            I see a hallway with a closed door on the left and an open doorway on the right. The doorway on the right leads to another hallway, and the hallway on the right is the only possible way to go. I see a closed door at the end of the hallway. Based on my knowledge of typical home layouts, the toilet is likely behind the closed door at the end of the hallway. I should go forward, which can be achieved by taking action 2.
+            <br>
+
+            <code>{'action': 2}</code>
+          </blockquote>
+        </div>
+        <div class="item" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <p class="caption is-size-6 has-text-centered">
+            STEP 5
+          </p>
+          <img id="step5" src="./shared/step5/color_sensor_chosen.png" alt="none" style="height: auto; max-height: 400px; width: auto; max-width: 100%;">
+          <blockquote class="caption is-size-7 has-text-justified" style="min-height: 200px; padding-bottom: 10px; font-style: italic; padding-left: 5pt; padding-right: 5pt;">
+            I see a hallway with a door on the right and an open doorway on the left. There is a washing machine and dryer visible in the doorway on the left. I think the toilet is most likely to be in the room to the left. I should go left. Action 1 will take me in that direction.
+            <br>
+
+            <code>{'action': 1}</code>
+          </blockquote>
+        </div>
+        <div class="item" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <p class="caption is-size-6 has-text-centered">
+            STEP 6
+          </p>
+          <img id="step6" src="./shared/step6/color_sensor_chosen.png" alt="none" style="height: auto; max-height: 400px; width: auto; max-width: 100%;">
+          <blockquote class="caption is-size-7 has-text-justified" style="min-height: 200px; padding-bottom: 10px; font-style: italic; padding-left: 5pt; padding-right: 5pt;">
+            I see a laundry room with a washing machine and dryer, and a door to my left. I can see into a hallway that leads to a room with a fireplace. Toilets are usually located in bathrooms, so I should go through the hallway to the right. Action 2 leads me down the hallway.
+            <br>
+
+            <code>{'action': 2}</code>
+          </blockquote>
+        </div>
+        <div class="item" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <p class="caption is-size-6 has-text-centered">
+            STEP 7
+          </p>
+          <img id="step7" src="./shared/step7/color_sensor_chosen.png" alt="none" style="height: auto; max-height: 400px; width: auto; max-width: 100%;">
+          <blockquote class="caption is-size-7 has-text-justified" style="min-height: 200px; padding-bottom: 10px; font-style: italic; padding-left: 5pt; padding-right: 5pt;">
+            I see a bathroom to my right, with a toilet. It is likely that this is the nearest toilet. I should go right. Action 1 should move me in the right direction.
+            <br>
+            <code>{'action': 1}</code>
+          </blockquote>
+        </div>
+        <div class="item" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <p class="caption is-size-6 has-text-centered">
+            STEP 8
+          </p>
+          <img id="step8" src="./shared/step8/color_sensor_chosen.png" alt="none" style="height: auto; max-height: 400px; width: auto; max-width: 100%;">
+          <blockquote class="caption is-size-7 has-text-justified" style="min-height: 200px; padding-bottom: 10px; font-style: italic; padding-left: 5pt; padding-right: 5pt;">
+            <p class="caption is-size-7 has-text-justified"> [Stopping prompt]</p>
+            The image shows a bathroom with a toilet. The agent is very close to the toilet.
+            <br>
+
+            <code>{'done': 1}</code>
+          </blockquote>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-
 
 
 <section class="section">
   <div class="container is-max-desktop">
-
-    <div class="columns is-fill">
-
+    <div class="columns is-centered">
       <!-- Visual Effects. -->
       <div class="column">
+        <h2 class="title is-4">Baseline: PIVOT</h2>
         <div class="content">
-          <h2 class="title is-3">Baseline: PIVOT</h2>
-          <div class="columns is-centered">
-            <div class="column content">
-              <p>
-                PIVOT (google 2024), is a similar visual-prompting method that uses the VLM's feedback to iteratively fit an action gaussian at each timestep. In this example, the agent's goal is to reach a bed, which it does successfully after a lot of time spent slowly turning around
-              </p>
-              <img id="pivot" src="./shared/pivot_bed_success.gif" alt="teaser" height="100%">
-              <p>
-                In this example, the agent's goal is to reach the toilet, but PIVOT struggles with multi-modality and avoiding obstacles.
-              </p>
-              <img id="pivot" src="./shared/PIVOT_toilet_fail.gif" alt="teaser" height="100%">
-            </div>
+          <p>
+            We evaluate PIVOT (Google 2024), which is a similar visual-prompting method that uses the VLM's feedback to iteratively fit an action gaussian at each timestep. 
+          </p>
+          <img id="pivot" src="./shared/pivot_bed_success.gif" alt="teaser" height="100%">
+          <p class="caption" style="font-size: 0.75rem; color: #555; margin-top: 0.5em;">
+            Example 1: Bed. The agent completes the goal successfully, but spends a lot of time turning around.
+          </p>
+          
+        </div>
+        <div class="content">
+          <img id="pivot" src="./shared/PIVOT_toilet_fail.gif" alt="teaser" height="100%">
+          <p class="caption" style="font-size: 0.75rem; color: #555; margin-top: 0.5em;">
+            Example 2: Toilet. The agent fails to complete the goal and gets stuck in the corner. The action distribution struggles to represent the multi-modality of the action space.
+          </p>
         </div>
       </div>
-      <!--/ Visual Effects. -->
 
-      <!-- Matting. -->
       <div class="column">
-        <h2 class="title is-3">Baseline: Ours -nav & prop</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              To evaluate the direct impact of our prompting method, we run a baseline without the navigability and action_proposer modules. In this example, the agent's goal is to reach a bed, but it gets stuck behind obstacles
-            </p>
-            <img id="pivot" src="./shared/base_bed_fail.gif" alt="teaser" height="100%">
-
-          </div>
-          <div class="column content">
-            <p>
-              In this example, the agent's goal is to reach the toilet, which it completes successfully but after wasting a lot of time in the corner.
-            </p>
-            <img id="pivot" src="./shared/base_success_toilet.gif" alt="teaser" height="100%">
-          </div>
+        <h2 class="title is-4">Baseline w/o Nav & Prop</h2>
+        <div class="content">
+          <p>
+            To evaluate the direct impact of our prompting method, we run a baseline without the navigability and action_proposer modules.
+          </p>
+          <img id="pivot" src="./shared/base_bed_fail.gif" alt="teaser" height="100%">
+          <p class="caption" style="font-size: 0.75rem; color: #555; margin-top: 0.5em;">
+            Example 1: Bed. The agent fails to complete the goal, as it gets stuck behind a chair and keeps trying to move through it.
+          </p>
+        </div>
+        <div class="content">
+          <img id="pivot" src="./shared/base_success_toilet.gif" alt="teaser" height="100%">
+          <p class="caption" style="font-size: 0.75rem; color: #555; margin-top: 0.5em;">
+            Example 2: Toilet. The agent completes the goal successfully but spends a lot of time getting out of the bedroom corner. 
+          </p>
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <!-- <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2> -->
-
-        <!-- Interpolating. -->
-        <!-- <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/image.png"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/image.png"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/> -->
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <!-- <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/animation.gif"
-                    type="video/mp4">
-          </video>
-        </div> -->
-        <!--/ Re-rendering. -->
-
-      <!-- </div>
-    </div> -->
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <!-- <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Concurrent Work. -->
-
   </div>
 </section>
+
 
 
 <section class="section" id="BibTeX">
