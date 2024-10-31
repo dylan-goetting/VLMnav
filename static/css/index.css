@@ -12,13 +12,13 @@ body {
     margin-top: 5px;
     margin-bottom: 5px;
 }
-/* 
+
 .dnerf {
   font-variant: small-caps;
   font-weight: bold !important;
   font-size: 18px !important;
   color: red !important;
-} */
+}
 
 .capt {
   font-size: 0.85rem !important; /* Force smaller text */
